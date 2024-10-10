@@ -1,9 +1,11 @@
 # Semaine 02/16
 
-- [ ] Python est un langage objet
-- [ ] Le langage est défini par le Datamodel (https://docs.python.org/3/reference/datamodel.html)
-- [ ] Dans le datamodel, y'a des fonctions magiques `__xxx__` qui permettent de surcharger des opérateurs, et des comportements
-- [ ] ? après un objet permet de voir les méthodes disponibles (help)
+- [x] Python est un langage objet
+  - [x] Il y a des classes
+  - [x] Et des objets (instances)
+- [x] Le langage est défini par le [Datamodel Python](https://docs.python.org/3/reference/datamodel.html)
+- [x] Dans le datamodel, y'a des fonctions magiques `__xxx__` qui permettent de surcharger des opérateurs, et des comportements
+- [x] Depuis Jupyter ou une interface REPL le `?` après un objet permet de voir les méthodes disponibles (help)
 
 ## OOP
 
@@ -23,3 +25,8 @@
 - [x] Et fini le premier labo...
 
 Then: vous pouvez partir manger...
+
+## Références
+
+- [Introduction à Git](https://heig-tin-info.github.io/handbook/tools/dev/git/)
+- [Installation de Python](https://heig-tin-info.github.io/handbook/tools/python/python/)

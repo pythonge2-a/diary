@@ -1,6 +1,10 @@
 # Semaine 04/16
 
-- [ ] Arguments (`*args`, `**kwargs`)
+- [x] Arguments (`*args`, `**kwargs`)
+- [x] Itérables (`__iter__`, `__next__`)
+- [x] Compréhension (list, dict, set, generator)
+- [x] Modules (`__init__.py`, `__main__.py`)
+- [x] Environnement virtuels (`venv`, `pip`)
 
 ## Arguments de fonctions
 
@@ -112,7 +116,7 @@ $ python
 $ python -m module
 ```
 
-## Environnement virtuels 
+## Environnement virtuels
 
 On utilise `venv` pour créer un environnement virtuel.
 
@@ -121,7 +125,7 @@ $ python -m venv venv
 $ source venv/bin/activate
 ```
 
-Sous Windows 
+Sous Windows
 
 ```cmd
 > python -m venv venv
