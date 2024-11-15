@@ -30,3 +30,21 @@ print(hash)
 - `git checkout` pour revenir à un commit
 - `git rev-parse HEAD` pour voir le hash du dernier commit
 - `git cat-file -p <hash>` pour voir le contenu d'un commit
+
+## Commandes Git
+
+```bash
+# -m "Message"    pour ajouter un message
+# -a              pour ajouter tous les fichiers
+git commit -am "Message" 
+git commit -m 
+git commit 
+```
+
+
+## Meta commandes
+
+- `git clone` (git init, git remote add, git fetch, git checkout)
+- `git pull` (git fetch, git merge/rebase)
+- `git pull --rebase` (git fetch, git rebase)
+- `git pull --merge` (git fetch, git merge)
