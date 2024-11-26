@@ -3,6 +3,7 @@
 - [ ] `help('keywords')`
 - [ ] Built-in Functions
 - [ ] Poetry / Venv
+- [ ] https://github.com/Asabeneh/30-Days-Of-Python
 - [ ] Turtle
 - [ ] Koch Snowflake avec Turtle
 
