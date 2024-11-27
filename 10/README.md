@@ -3,10 +3,10 @@
 - [x] Built-in Functions
 - [x] `help('keywords')`
 - [x] https://github.com/Asabeneh/30-Days-Of-Python
-
 - [ ] Poetry / Venv
 - [ ] Turtle
 - [ ] Koch Snowflake avec Turtle
+- [ ] Projets Python
 
 ## Turtle
 
@@ -570,3 +570,20 @@ format
 issubclass
 memoryview
 ```
+
+## Projets Python
+
+- [ ] Simulateur de circuit électrique (LT spice)
+- [ ] Gestionnaire de batteries
+- [ ] Simulateur de panneaux solaires
+- [ ] Jeu de la vie (Conway)
+- [ ] Lecture et interprétation d'electrocardiogrammes
+- [ ] Application météo
+- [ ] Casse-brique (pygame)
+- [ ] Mastermind (pygame)
+- [ ] Uno (pygame)
+- [ ] Idle game style Cookie Clicker
+- [ ] Projet avec Manim
+- [ ] Jeu Memory
+- [ ] Chiffrement de messages (César, Vigenère, etc.)
+- [ ] Simulateur d'Enigma
