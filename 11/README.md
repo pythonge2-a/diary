@@ -24,7 +24,7 @@ réalisé en groupe.
 
 ### Modalités
 
-- Groupes de 3-4 étudiants
+- Groupes de 3-5 étudiants
 - 1 projet par groupe
 - Travail collaboratif sur GitHub avec Git
 - Réalisable d'ici la fin du semestre
@@ -45,7 +45,7 @@ réalisé en groupe.
 ### Livrable du brainstorming
 
 1. Dimanche 2024-12-01T23:59 
-   - Idées de projet 
+   - Idées de projet (une ou plusieurs phrases)
    - Membres du groupe
 2. Jeudi 2024-12-05T23:59
    - Document de description du projet
