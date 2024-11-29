@@ -1,25 +1,9 @@
 # Semaine 10/16
 
-- [x] Built-in Functions
+- [x] Mots clés Python (keywords)
 - [x] `help('keywords')`
 - [x] https://github.com/Asabeneh/30-Days-Of-Python
-- [ ] Poetry / Venv
-- [ ] Turtle
-- [ ] Koch Snowflake avec Turtle
-- [ ] Projets Python
-
-## Turtle
-
-```python
-import turtle
-t = turtle.Turtle()
-t.screen.bgcolor("black")
-t.pencolor("yellow")
-t.screen.title("Turtle")
-t.screen.setup(800, 800)
-t.forward(100)
-t.left(90)
-```
+- [x] Idées de mini-projets
 
 ## Mots-clés
 
@@ -571,19 +555,3 @@ issubclass
 memoryview
 ```
 
-## Projets Python
-
-- [ ] Simulateur de circuit électrique (LT spice)
-- [ ] Gestionnaire de batteries
-- [ ] Simulateur de panneaux solaires
-- [ ] Jeu de la vie (Conway)
-- [ ] Lecture et interprétation d'electrocardiogrammes
-- [ ] Application météo
-- [ ] Casse-brique (pygame)
-- [ ] Mastermind (pygame)
-- [ ] Uno (pygame)
-- [ ] Idle game style Cookie Clicker
-- [ ] Projet avec Manim
-- [ ] Jeu Memory
-- [ ] Chiffrement de messages (César, Vigenère, etc.)
-- [ ] Simulateur d'Enigma
