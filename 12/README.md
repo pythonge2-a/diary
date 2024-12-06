@@ -1,5 +1,45 @@
 # Semaine 12/16
 
+## Modalités du mini-projet
+
+- Groupes de 3-5 étudiants
+- 1 projet par groupe
+- Travail collaboratif sur GitHub avec Git
+- Réalisable d'ici la fin du semestre
+- Projet Python sous forme d'un module Python
+- Présentation orale en fin de semestre devant toute la classe (5-7 min)
+
+## Critères d'évaluation
+
+| Critère                                                          | Poids |
+| ---------------------------------------------------------------- | ----- |
+| Authenticité du projet (pas de plagiat, créativité)              | 5     |
+| Module Python avec Poetry, dépendances à jour                    | 6     |
+| Le `README.md` du projet décrit le projet et son utilisation     | 6     |
+| Contribution équilibrée de tous les membres sur Git              | 7     |
+| Qualité du code (PEP8, docstring, etc.), test avec black et ruff | 6     |
+| Tests unitaires (pytest) avec couverture du code d'au moins 40%  | 6     |
+| Documentation, votre code/readme est compréhensible par tous     | 6     |
+| Qualité de la présentation finale                                | 20    |
+| Démonsration réussie (attention à Murphy)                        | 20    |
+
+## Points théorique (dans le prochain quiz)
+
+- Poetry / Venv
+- Module Python
+- Tests unitaires
+
+### Cahier des charges
+
+- Le projet **doit** manipuler/traiter des données. 
+- Le module **doit** comporter un ou plusieurs affichage graphique.
+- Le projet **doit** s'appuyer sur des algorithmes.
+- Le projet **doit** être en lien avec votre formation.
+- Le projet **doit** être original (pas de copier-coller de projet existant).
+- Le projet **doit** être documenté (docstring, README.md).
+- Le projet **doit** comporter des tests unitaires (pytest).
+- Le projet **peut** avoir des synergies avec d'autres groupes.
+
 ## Livrable du Jeudi 2024-12-05T23:59
 
 Un document de environ 1 page en Markdown qui décrit le projet et ses objectifs.
