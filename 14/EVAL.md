@@ -55,6 +55,11 @@
 
 ## Justification
 
+### Assiduité
+
+- https://arxiv.org/abs/1702.01262
+- https://sylviecartier.com/IMG/pdf/Cartier_et_Bernatchez_2011.pdf
+
 ### Absence de support de cours
 
 Écrire un support de cours et des slides n'est pas une approche pédagogique que j'apprécie car elle amène souvent une vue trop dogmatique. En outre, Python est un langage qui évolue rapidement, et le support de cours devrait être remanié régulièrement.
