@@ -14,3 +14,5 @@ Pour répartir 8 groupes sur une durée de 1h20 (de 8h40 à 10h), chaque groupe 
 | 9h30-9h40  | 6      | Ballon sonde |
 | 9h40-9h50  | 7      | Casse brique |
 | 9h50-10h00 | 8      | Django-Manim |
+
+## Chalet
