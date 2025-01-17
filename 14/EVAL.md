@@ -6,16 +6,17 @@
 
 - Cours très basique sans nécessairement les prérequis en informatique.
 - Cours totalement inadéquat et vu comme inutile.
+- Le programme ne devrait pas changer en cours de formation.
 
 ### Généralités
 
 - Manque générale de structure du cours et de préparation du professeur.
 - Les concepts appris devraient remplacer le cours Matlab et ses objectifs.
-- Ce cours Python ne semble pas en lien avec notre formation d'ingénieur.
+- (Ce cours Python ne semble pas en lien avec notre formation d'ingénieur.)
 - Les étudiants manquent des prérequis nécessaires pour ce cours.
-- Peu d'intérêt pour la filière génie électrique, car il ne remplace pas Matlab.
+- (Peu d'intérêt pour la filière génie électrique, car il ne remplace pas Matlab.)
 - Les étudiants n'ont pas envie d'un autre cours de programmation (EN).
-- Pourquoi apprendre à coder ou à faire du Git ? Ce n'est pas notre métier.
+- Pourquoi apprendre à coder ou à faire du Git ? Ce n'est pas notre métier (EN)
 - Le cours est isolé dans un module sans compensation possible.
 - Pas assez de temps à disposition pour les questions.
 - Les retards et absences des étudiants sont fréquentes.
@@ -25,7 +26,8 @@
 
 - Le cours s'éloigne de la fiche d'unité et est moins orienté vers les projets.
 - Aucun support théorique fourni par le professeur.
-- Le professeur ne sait pas ce qu'il enseigne et ne prépare pas son cours.
+- (Le professeur ne sait pas ce qu'il enseigne)
+- Le prof ne prépare pas son cours.
 
 ### Laboratoires
 
