@@ -3,7 +3,7 @@
 ## Cours
 
 - Théorie
-- Pratique 
+- Pratique
 - Quiz (annoncé ou pas annoncé (en fonction des présences (et de votre sérieux)))
 - Labos
 - Un mini-projet (semaine 7-8)
@@ -13,7 +13,7 @@
 
 ## Python
 
-- Python c'est un vieux language (1991) 
+- Python c'est un vieux language (1991)
 - Il a 35 ans
 - Il a été créé par Guido van Rossum
 - Jusqu'en 2019, il était le "Benevolent Dictator For Life" (BDFL)
@@ -41,10 +41,10 @@ l = (n for n in range(10)) # generator (itérateur paresseux)
 
 m = lambda x: x * 2 # fonction anonyme
 def add(x, y): # fonction nommée
-    return x + y 
+    return x + y
 
 class Person: # classe
-    pass 
+    pass
 
 obj = Person() # instance de classe
 ```
@@ -72,7 +72,7 @@ obj = Person() # instance de classe
 5. Exécuter le programme
 6. Créer un environnement virtuel avec venv
 7. Activer l'environnement virtuel
-8. Installer avec pip IPython 
+8. Installer avec pip IPython
 9. Tester IPython dans le terminal
 
 SI Y'A TOUT QUI MARCHE VOUS POUVEZ Y ALLER...
