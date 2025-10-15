@@ -1,6 +1,6 @@
 # Cours Python GE2 - Journal de cours
 
-Le cours réparti sur 16 semaines couvre les sujets suivants:
+Le cours, réparti sur 16 semaines, couvre les sujets suivants :
 
 - [x] 01 - Introduction à Python
 - [x] 02 - Structures de données

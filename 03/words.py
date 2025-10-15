@@ -1,4 +1,7 @@
+import random
+
 class Words:
+    """An iterator that returns random words from a file."""
     def __init__(self, filename, length=10):
         with open(filename, "r") as fp:
             self.words = fp.readlines()

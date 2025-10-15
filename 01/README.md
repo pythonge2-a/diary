@@ -4,7 +4,7 @@
 
 - Théorie
 - Pratique
-- Quiz (annoncé ou pas annoncé (en fonction des présences (et de votre sérieux)))
+- Quiz (annoncé ou surprise selon les présences et votre sérieux)
 - Labos
 - Un mini-projet (semaine 7-8)
   - Travail en groupe (plusieurs personnes)
@@ -13,12 +13,12 @@
 
 ## Python
 
-- Python c'est un vieux language (1991)
-- Il a 35 ans
+- Python est un langage de programmation né en 1991
 - Il a été créé par Guido van Rossum
-- Jusqu'en 2019, il était le "Benevolent Dictator For Life" (BDFL)
-- Le code source de Python est disponible sur GitHub: [ici](https://github.com/python/cpython)
-- Python est un programme open source qui s'appelle python
+- Jusqu'en 2018, il en était le "Benevolent Dictator For Life" (BDFL)
+- Le code source de Python est disponible sur GitHub : [python/cpython](https://github.com/python/cpython)
+- Python est un langage open source maintenu par la Python Software Foundation
+- Le langage met l'accent sur la lisibilité et plusieurs paradigmes (impératif, objet, fonctionnel)
 
 ## Syntaxe
 
@@ -75,4 +75,4 @@ obj = Person() # instance de classe
 8. Installer avec pip IPython
 9. Tester IPython dans le terminal
 
-SI Y'A TOUT QUI MARCHE VOUS POUVEZ Y ALLER...
+Si tout fonctionne, bravo : continuez vers la suite du cours !

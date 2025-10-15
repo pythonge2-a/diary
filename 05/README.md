@@ -1,15 +1,14 @@
 # Semaine 05/16
 
-- [x] args kwargs
-- [x] zip
-- [x] Notation ** et *
-
+- [x] `*args` et `**kwargs`
+- [x] `zip`
+- [x] Paramètres positionnels, nommés et notation `*` / `/`
 - [x] Créer un module
 - [x] Importer un module
 
-## Args Kwargs
+## *args et **kwargs
 
-En python les args font référence aux arguments positionnels, et les kwargs aux arguments nommés. Il est possible de récupérer de manière générique les arguments passés à une fonction en utilisant `*args` et `**kwargs`.
+En Python, `args` fait référence aux arguments positionnels et `kwargs` aux arguments nommés. Il est possible de récupérer de manière générique tous les arguments passés à une fonction en utilisant `*args` (tuple) et `**kwargs` (dictionnaire).
 
 ```python
 def ma_fonction(*args, **kwargs):
@@ -19,16 +18,16 @@ def ma_fonction(*args, **kwargs):
 ma_fonction(1, 2, 3, a=4, b=5)
 ```
 
-Les arguments positionnels sont récupérés dans un tuple, et les arguments nommés dans un dictionnaire.
+Les arguments positionnels sont récupérés dans un tuple et les arguments nommés dans un dictionnaire.
 
-On peut demander à Python lors de la déclaration de d'une fonction de forcer l'utilisation d'arguments nommés en utilisant un `*` dans la déclaration:
+On peut demander à Python, lors de la déclaration d'une fonction, de forcer l'utilisation d'arguments nommés en utilisant un `*` dans la signature :
 
 ```python
 def ma_fonction(a, b, *, c, d):
     print(a, b, c, d)
 ```
 
-On peut également forcer l'utilisation d'arguments positionnels en utilisant un `/` dans la déclaration:
+On peut également forcer l'utilisation d'arguments positionnels en utilisant un `/` dans la déclaration :
 
 ```python
 def ma_fonction(a, b, /, c, d):
@@ -127,7 +126,7 @@ zipped = zip(list1, list2)
 print(list(zipped))  # [(1, 'a'), (2, 'b'), (3, 'c')]
 ```
 
-Ce qui intéressant c'est qu'on peut dézipper un itérable de tuples en utilisant l'opérateur `*`:
+Ce qui est intéressant, c'est qu'on peut dézipper un itérable de tuples en utilisant l'opérateur `*` :
 
 ```python
 zipped = [(1, 'a'), (2, 'b'), (3, 'c')]
@@ -136,36 +135,57 @@ print(list1)  # [1, 2, 3]
 print(list2)  # ['a', 'b', 'c']
 ```
 
-Zip est souvent utilisé dans une boucle
+`zip` retourne un itérateur paresseux : une fois consommé, il faut en recréer un nouveau si l'on souhaite itérer à nouveau. Il est souvent utilisé dans une boucle `for` :
 
 ```python
 for a, b in zip(list1, list2):
     print(a, b)
 ```
 
+Pour traiter des séquences de longueur différente, utilisez `itertools.zip_longest` :
+
+```python
+from itertools import zip_longest
+
+for a, b in zip_longest(list1, list2, fillvalue=None):
+    print(a, b)
+```
+
 ## Modules
 
-En python un fichier est considéré comme un module.
-Un dossier est considéré comme un module s'il contient un fichier `__init__.py`. Si vous avez des sous-modules, veillez à bien aussi à avoir un `__init__.py` dans chaque dossier.
+En Python, chaque fichier (`.py`) est un module. Un dossier devient un package lorsqu'il contient un fichier `__init__.py`. Depuis Python 3.3, les namespace packages permettent de s'affranchir de ce fichier, mais dans un contexte pédagogique il reste recommandé de garder un `__init__.py` explicite, surtout en présence de sous-packages.
 
-Attention à ne jamais mettre de code exécutable dans un `__init__.py`, car il sera exécuté à chaque import du module.
+Évitez de mettre du code exécutable dans un `__init__.py`, car il sera exécuté à chaque import du package. Limitez-vous à l'initialisation de l'API (`__all__`, import de sous-modules, constantes, etc.).
 
 ## Importer
 
-En Python les syntaxes possibles sont:
+En Python les syntaxes possibles sont :
 
 ```python
-import module # importe le module en entier comme un namespace
-from module import fonction # importe une fonction spécifique
-from module import fonction as f # importe une fonction spécifique avec un alias
-from module import * # importe toutes les fonctions du module (caca)```
+import module  # importe le module en entier comme un namespace
+from module import fonction  # importe une fonction spécifique
+from module import fonction as f  # importe une fonction spécifique avec un alias
+from module import *  # importe tout le namespace du module (fortement déconseillé)
 ```
 
-Dans le contexte d'un module, on peut aussi faire des imports relatifs:
+Dans le contexte d'un module, on peut aussi faire des imports relatifs :
 
 ```python
-from . import module # importe un module dans le même dossier
-from .. import module # importe un module dans le dossier parent
-from .module import fonction # importe une fonction spécifique dans le même dossier
-from ..module import fonction # importe une fonction spécifique dans le dossier parent
+from . import module  # importe un module dans le même dossier
+from .. import module  # importe un module dans le dossier parent
+from .module import fonction  # importe une fonction spécifique dans le même dossier
+from ..module import fonction  # importe une fonction spécifique dans le dossier parent
+```
+
+Privilégiez les imports absolus (`from package.module import ...`) pour la lisibilité et utilisez les imports relatifs uniquement à l'intérieur d'un package cohérent.
+
+Pour rendre un module exécutable tout en conservant un comportement correct à l'import, encapsulez le code dans un `if __name__ == "__main__":` :
+
+```python
+def main():
+    print("Ce bloc s'exécute seulement quand le module est lancé directement")
+
+
+if __name__ == "__main__":
+    main()
 ```
