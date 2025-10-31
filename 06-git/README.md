@@ -15,7 +15,7 @@ Imaginez que l'objectif est de créer un moyen de stocker des transactions moné
 - Tout le monde doit pouvoir vérifier les transactions tout est transparent.
 - Le système est anonyme.
 
-Imagions que nous avons des coffres en diamant tansparents et indestructibles. Une fois fermés, personne ne peut plus jamais les ouvrir et que pour fermer le coffre il faut un effort surhumain (des miliers de personnes qui travaillent ensemble).
+Imaginons que nous avons des coffres en diamant, transparents et indestructibles. Une fois fermés, personne ne peut plus jamais les ouvrir et que pour fermer le coffre il faut un effort surhumain (des milliers de personnes qui travaillent ensemble).
 
 Si Bob veut envoyer 10 unités monétaires à Alice, il place une note dans le coffre :
 
@@ -25,13 +25,13 @@ BOB -> ALICE : 10
 
 Le coffre est ensuite scellé (fermé) et un effort surhumain est fourni pour le fermer. Une fois fermé, le coffre est placé dans une rangée.
 
-Adméttons maintenant qu'Alice veut envoyer 5 unités monétaires à Eve. Elle place une note dans un nouveau coffre :
+Admettons maintenant qu'Alice veut envoyer 5 unités monétaires à Eve. Elle place une note dans un nouveau coffre :
 
 ```text
 ALICE -> EVE : 5
 ```
 
-Avant de fermer le coffre, Alice doit prouver qu'elle a bien reçu 10 unités de Bob. Pour cela, elle inclut une référence au coffre précédent dans le nouveau coffre. Pour ce faire elle prend en photo le premier coffre (comme il est transparent on y voit bien la note à l'intérieur, ainsi que le numéro du coffre: coffre n°1) et elle colle cette photo sur la note qu'elle place dans le nouveau coffre :
+Avant de fermer le coffre, Alice doit prouver qu'elle a bien reçu 10 unités de Bob. Pour cela, elle inclut une référence au coffre précédent dans le nouveau coffre. Pour ce faire elle prend en photo le premier coffre (comme il est transparent, on y voit bien la note à l'intérieur, ainsi que le numéro du coffre: coffre n°1) et elle colle cette photo sur la note qu'elle place dans le nouveau coffre :
 
 ```text
            Coffre n°1                            Coffre n°2
@@ -55,9 +55,9 @@ Dans notre exemple précédant pour sceller les coffres, nous avons mentionné q
 
 Nous devons donc définir ce qu'est une fonction de hachage. Une fonction de hachage est un algorithme qui prend une entrée (ou 'message') et retourne une chaîne de caractères de longueur fixe, généralement sous forme de nombre hexadécimal. Cette sortie est appelée le 'hash' ou 'empreinte'.
 
-Le hash de type SHA-256 (Secure Hash Algorithm 256 bits) est largement utilisé dans les applications de sécurité, la blockchain et même Git. Il produit un hash de 256 bits (32 octets) représenté par une chaîne hexadécimale de 64 caractères. Pour simplifier la compréhension, nous allons considérablement simplifier le fonctionnement mais garder l'idée principale.
+Le hash de type SHA-256 (Secure Hash Algorithm 256 bits) est largement utilisé dans les applications de sécurité, la blockchain et même Git. Il produit un hash de 256 bits (32 octets) représenté par une chaîne hexadécimale de 64 caractères. Pour simplifier la compréhension, nous allons considérablement simplifier le fonctionnement, mais garder l'idée principale.
 
-On a une chaîne de caractère d'entrée "BONJOUR!" et on veut générer une chaîne de sortie. Le B va sur la seconde position, le O sur la troisième. Pour calculer cinquième case on fait un ou exclusif (XOR) entre la 4e et la 5e case (J et O) auquel on fait également un XOR avec une valeur fixe K dépendante de la valeur. On fait pareil avec la fonction J qui contient une table de 8 valeurs fixes utilisées pour le calcul:
+On a une chaîne de caractère d'entrée "BONJOUR!" et on veut générer une chaîne de sortie. Le B va sur la seconde position, le O sur la troisième. Pour calculer une cinquième case on fait un ou exclusif (XOR) entre la 4e et la 5e case (J et O) auquel on fait également un XOR avec une valeur fixe K dépendante de la valeur. On fait pareil avec la fonction J qui contient une table de 8 valeurs fixes utilisées pour le calcul:
 
 ```text
 +---+---+---+---+---+---+---+---+
@@ -81,7 +81,7 @@ On a une chaîne de caractère d'entrée "BONJOUR!" et on veut générer une cha
   '--------------------------------'
 ```
 
-On répète ce processus 1000 fois, a chaque passe le texte sera mélangé un peu plus. Le résultat final est le hash. Si le texte est beaucoup plus long que 8 caractères, pas de problème, on le découpe en blocs de 8 caractères et on se déplace dans le texte en faisant un XOR entre le hash courant et le bloc suivant, ce jusqu'à la fin du texte.
+On répète ce processus 1000 fois, à chaque passe le texte sera mélangé un peu plus. Le résultat final est le hash. Si le texte est beaucoup plus long que 8 caractères, pas de problème, on le découpe en blocs de 8 caractères et on se déplace dans le texte en faisant un XOR entre le hash courant et le bloc suivant, ce jusqu'à la fin du texte.
 
 Depuis votre terminal vous pouvez utiliser la commande `sha256sum` pour calculer le hash SHA-256 d'un fichier ou d'une chaîne de caractères. Par exemple :
 
@@ -105,7 +105,7 @@ $ echo -n 'BONJOUR!10225210' | sha256sum
 
 Le programme [`sha256-zeros.py`](sha256-zeros.py) automatise ce processus en cherchant le nonce approprié pour vous. Vous pouvez constater si vous exécutez le script qu'il prend un certain temps pour trouver le bon nonce, illustrant la difficulté de ce processus. Plus on veut de zéros au début du hash, plus le temps de calcul augmente exponentiellement.
 
-Avec les Bitcoin on appelle cela la preuve de travail (proof of work), et c'est ce mécanisme qui sécurise la blockchain contre les attaques et garantit l'intégrité des transactions. Il faut une puissance de calcul considérable pour trouver le nonce correct, ce qui rend les attaques coûteuses et peu pratiques. Ce sont des centaines de miliers d'ordinateurs à travers le monde qui participent à ce processus de minage pour sécuriser le réseau Bitcoin. Personne ne sait qui va réussir à trouver le nonce en premier, mais celui qui y parvient est récompensé par de nouveaux bitcoins.
+Avec les Bitcoins on appelle cela la preuve de travail (proof of work), et c'est ce mécanisme qui sécurise la blockchain contre les attaques et garantit l'intégrité des transactions. Il faut une puissance de calcul considérable pour trouver le nonce correct, ce qui rend les attaques coûteuses et peu pratiques. Ce sont des centaines de milliers d'ordinateurs à travers le monde qui participent à ce processus de minage pour sécuriser le réseau Bitcoin. Personne ne sait qui va réussir à trouver le nonce en premier, mais celui qui y parvient est récompensé par de nouveaux bitcoins.
 
 ## Git
 
@@ -134,7 +134,7 @@ $ tree .git
     └── tags
 ```
 
-On obtiens dans le dossier `.git/objects/` trois fichiers. Ce sont les objets Git qui représentent notre commit, l'arbre (tree) et le blob (le contenu du fichier). On peut utiliser `git cat-file -p <hash>` pour afficher leur contenu :
+On obtient dans le dossier `.git/objects/` trois fichiers. Ce sont les objets Git qui représentent notre commit, l'arbre (tree) et le blob (le contenu du fichier). On peut utiliser `git cat-file -p <hash>` pour afficher leur contenu :
 
 ```bash
 $ git cat-file -p 325a
@@ -163,7 +163,7 @@ La commande `init` permet de créer un nouveau dépôt Git. Elle initialise un n
 git init
 ```
 
-Derrière cette commande se cache plusieurs opérations de création de répertoires et de fichiers. Voici une version simplifiée de ce que fait `git init` :
+Derrière cette commande se cachent plusieurs opérations de création de répertoires et de fichiers. Voici une version simplifiée de ce que fait `git init` :
 
 ```bash
 mkdir .git
@@ -200,7 +200,7 @@ git clone <url-du-depot>
 
 Privilégiez toujours le clonage en SSH plutôt qu'en HTTPS pour des raisons de sécurité et de commodité.
 
-`clone` est une méta-commande qui effectue plusieurs opérations:
+`clone` est une métacommande qui effectue plusieurs opérations:
 
 ```bash
 git init <nom-du-repertoire>
@@ -258,7 +258,7 @@ git merge feature
 
 La commande `rebase` permet de réappliquer une série de commits sur une autre base. Elle est souvent utilisée pour maintenir un historique de commits linéaire en intégrant les modifications d'une branche dans une autre sans créer de commit de fusion.
 
-C'est la stratégie de fusion recommandée mais elle peut être délicate si des conflits surviennent.
+C'est la stratégie de fusion recommandée, mais elle peut être délicate si des conflits surviennent.
 
 ```bash
 git switch main
@@ -267,7 +267,7 @@ git rebase feature
 
 #### Pull
 
-La commande `pull` est une meta-commande qui combine `fetch` et `merge`. Elle récupère les modifications depuis un dépôt distant et les fusionne automatiquement avec votre branche locale.
+La commande `pull` est une métacommande qui combine `fetch` et `merge`. Elle récupère les modifications depuis un dépôt distant et les fusionne automatiquement avec votre branche locale.
 
 ```bash
 git pull
