@@ -154,3 +154,128 @@ Hello, World!
 Ainsi, on peut voir comment Git utilise les fonctions de hachage pour lier les objets entre eux et garantir l'intégrité de l'historique des modifications. Chaque commit référence un arbre, qui à son tour référence des blobs (fichiers), créant une structure en chaîne similaire à une blockchain.
 
 ### Commandes principales
+
+#### Initialisation d'un dépôt Git
+
+La commande `init` permet de créer un nouveau dépôt Git. Elle initialise un nouveau répertoire `.git` dans le répertoire courant, qui contiendra tous les fichiers et métadonnées nécessaires pour gérer les versions du projet.
+
+```bash
+git init
+```
+
+Derrière cette commande se cache plusieurs opérations de création de répertoires et de fichiers. Voici une version simplifiée de ce que fait `git init` :
+
+```bash
+mkdir .git
+mkdir .git/objects
+mkdir .git/refs
+echo "ref: refs/heads/main" > .git/HEAD
+```
+
+#### Fetch
+
+La commande `fetch` permet de récupérer les modifications depuis un dépôt distant sans les fusionner avec votre branche locale. Elle télécharge les nouveaux commits, branches et tags, mais ne modifie pas votre espace de travail actuel.
+
+```bash
+git fetch <nom-du-depot>
+```
+
+#### Remote
+
+La commande `remote` permet de gérer les dépôts distants associés à votre dépôt Git local. Elle vous permet d'ajouter, de supprimer ou de lister les dépôts distants.
+
+```bash
+git remote add origin <url-du-depot>
+```
+
+Vous pouvez avoir autant de dépôts distants que vous le souhaitez. Consensuellement, le dépôt principal est souvent nommé `origin` et les forks sont nommés `upstream`.
+
+#### Clonage d'un dépôt Git
+
+La commande `clone` permet de copier un dépôt Git existant depuis un serveur distant vers votre machine locale. Elle crée une copie complète du dépôt, y compris tout l'historique des versions.
+
+```bash
+git clone <url-du-depot>
+```
+
+Privilégiez toujours le clonage en SSH plutôt qu'en HTTPS pour des raisons de sécurité et de commodité.
+
+`clone` est une méta-commande qui effectue plusieurs opérations:
+
+```bash
+git init <nom-du-repertoire>
+cd <nom-du-repertoire>
+git remote add origin <url-du-depot>
+git fetch
+git checkout -b main origin/main
+```
+
+#### Commit
+
+La commande `commit` permet d'enregistrer les modifications apportées à votre dépôt Git local. Elle crée un nouvel objet commit qui référence les modifications actuelles dans l'index (staging area). Et déplace la branche courante pour pointer vers ce nouveau commit.
+
+```bash
+git commit -m "Message de commit"
+```
+
+Parfois il est utile d'utiliser les options suivantes:
+
+- `-a` : Ajoute automatiquement tous les fichiers suivis modifiés à l'index avant de faire le commit.
+- `--amend` : Modifie le dernier commit en y ajoutant les modifications actuelles dans l'index.
+- `--no-edit` : Utilisé avec `--amend`, il permet de modifier le dernier commit sans changer son message.
+- `--allow-empty` : Permet de créer un commit même si aucune modification n'a été faite.
+
+#### Branch
+
+La commande `branch` permet de gérer les branches dans un dépôt Git. Elle vous permet de créer, supprimer et lister les branches.
+
+```bash
+git branch <nom-de-la-branche>
+```
+
+#### Checkout
+
+La commande `checkout` permet de naviguer entre les différentes branches ou commits dans un dépôt Git. Elle met à jour votre espace de travail pour refléter l'état de la branche ou du commit spécifié.
+
+```bash
+git checkout <nom-de-la-branche-ou-hash>
+```
+
+#### Merge
+
+La commande `merge` permet de fusionner les modifications d'une branche dans une autre. Elle combine l'historique des deux branches et applique les modifications de la branche source dans la branche cible.
+
+Le résultat d'un merge est un commit possédant deux parents.
+
+Par exemple, imaginons que nous venons de terminer une fonctionnalité dans une branche appelée `feature` et que nous souhaitons intégrer ces modifications dans la branche principale `main`. Nous allons d'abord nous assurer d'être sur la branche `main`, puis nous allons fusionner la branche `feature` :
+
+```bash
+git switch main
+git merge feature
+```
+
+#### Rebase
+
+La commande `rebase` permet de réappliquer une série de commits sur une autre base. Elle est souvent utilisée pour maintenir un historique de commits linéaire en intégrant les modifications d'une branche dans une autre sans créer de commit de fusion.
+
+C'est la stratégie de fusion recommandée mais elle peut être délicate si des conflits surviennent.
+
+```bash
+git switch main
+git rebase feature
+```
+
+#### Pull
+
+La commande `pull` est une meta-commande qui combine `fetch` et `merge`. Elle récupère les modifications depuis un dépôt distant et les fusionne automatiquement avec votre branche locale.
+
+```bash
+git pull
+```
+
+La première fois que vous utilisez `git pull` sur un Git non configuré, il vous demandera de choisir entre `merge` et `rebase` comme stratégie de fusion par défaut. Vous pouvez configurer cette préférence avec la commande suivante :
+
+```bash
+git config --global pull.rebase true  # Pour utiliser rebase par défaut
+git config --global pull.rebase false # Pour utiliser merge par défaut
+```
