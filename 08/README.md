@@ -84,3 +84,10 @@ Ruff est un linter rapide pour Python. Il permet de vérifier la qualité du cod
 6. Ajouter une fonction complexe
 7. Ajouter un test pour cette fonction
 8. Tester le formatage avec `uv run ruff check .`
+9. Organisez proprement votre module avec un dossier et un __init__.py
+10. Documentez votre projet dans `README.md` 
+
+## Notes
+
+- Ne jamais mettre l'environnement virtuel dans Git
+- Toujours ajouter le `.lock` à Git
