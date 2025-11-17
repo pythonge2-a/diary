@@ -1,4 +1,4 @@
-# Semaine 08/16  
+# Semaine 08/16
 
 ## Mini Project
 
@@ -9,7 +9,7 @@
   - Démo de votre programme
   - Allocution de toute l'équipe
   - Vendeur, joviale, séduisant
-- Livraison du code 
+- Livraison du code
   - Le projet soit sur Git avec des commits de toutes et tous.
   - Est-ce que le prof arrive à faire fonctionner le code ?
   - Est-ce que c'est documenté ?
@@ -17,7 +17,7 @@
 - Participation
   - Est-ce que l'équipe est soudée
   - Est-ce vous êtes autonome...
-  
+
 ### Déroulement
 
 1. Annonce du cahier des charges
@@ -26,12 +26,12 @@
    - Proposer une idée de projet
 3. Rédiger Propositoin du projet
    - 1-2 pages A4
-   - Écrit en Markdown 
+   - Écrit en Markdown
    - Liste des membres
    - Nom du projet
    - Description du projet
    - Objectifs
-   - 17 novembre 2025 à 23h59   
+   - 17 novembre 2025 à 23h59
 
 ## Module Python Exécutable (CLI)
 
@@ -40,11 +40,11 @@
 - [ ] ruff (Lint)
 - [ ] pytest (Tests unitaires)
 
-## UV 
+## UV
 
 - uv init
 - uv sync
-- uv pip install 
+- uv pip install
 - uv add <package>
 - uv run <...>
 
@@ -64,14 +64,14 @@ Textual
 
 ## Ruff
 
-Ruff est un linter rapide pour Python. Il permet de vérifier la qualité du code et de détecter les erreurs potentielles comme : 
+Ruff est un linter rapide pour Python. Il permet de vérifier la qualité du code et de détecter les erreurs potentielles comme :
 
 - Erreurs de syntaxe
 - Problèmes de style (PEP 8)
 - Importations inutilisées
 - Variables non utilisées
 - Problèmes de complexité cyclomatique (trop de branches conditionnelles)
-- Problèmes de formatage de chaînes f-string 
+- Problèmes de formatage de chaînes f-string
 - Et bien plus encore...
 
 ## Exercice
@@ -85,7 +85,7 @@ Ruff est un linter rapide pour Python. Il permet de vérifier la qualité du cod
 7. Ajouter un test pour cette fonction
 8. Tester le formatage avec `uv run ruff check .`
 9. Organisez proprement votre module avec un dossier et un __init__.py
-10. Documentez votre projet dans `README.md` 
+10. Documentez votre projet dans `README.md`
 
 ## Notes
 
