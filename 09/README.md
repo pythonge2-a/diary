@@ -6,7 +6,7 @@
 | Asani Adi               |        |            |
 | Beaud Corentin          | 2      | Audio      |
 | Bechara Jad             |        |            |
-| Berthoud Tom            |        |            |
+| Berthoud Tom            | 6      | GMAO       |
 | Blatti Thomas           | 3      | Solar      |
 | Brêchet Thomas          | 2      | Audio      |
 | Conde Garea Gabriel     |        |            |
@@ -16,7 +16,7 @@
 | do Carmo Afonso Antonio | 1      | Babisstat  |
 | do Vale Lopes Andre     | 2      | Audio      |
 | Ferreira Tomovic Dani   | 3      | Solar      |
-| Fuentes Hadrien         |        |            |
+| Fuentes Hadrien         | 6      | GMAO       |
 | Gloor Lorentin          |        |            |
 | Kosher Ali              |        |            |
 | Lambiel Ludovic         | 3      | Solar      |
@@ -64,3 +64,7 @@ Ce projet, développé dans le cadre du cours PythonGE et inspiré par la missio
 ### 5. FingerFlow
 
 Le projet FingerFlow vise à développer un programme Python utilisant MediaPipe pour la reconnaissance de la main en temps réel. Grâce à la détection des points clés de la main (landmarks), l’utilisateur pourra interagir avec son ordinateur sans contact, en simulant des actions telles que le déplacement du curseur, les différents clics par gestes et le dessin dans l’air avec un doigt. L’application exploitera la webcam pour capter les mouvements de la main et traduire ces gestes en commandes interactives, combinant ainsi vision par ordinateur, interaction homme-machine et créativité numérique. Le programme sera exécuté directement sous Windows pour garantir un accès fiable à la caméra.
+
+### 6. GMAO & Assurance
+
+Le projet vise à développer une application Python de gestion de maintenance assistée par ordinateur (GMAO) et de gestion des dossiers d’assurance. L’application permettra de gérer les pièces, machines, techniciens et interventions pour la maintenance industrielle, ainsi que la création et le suivi des dossiers d’assurance, sinistres et documents associés. Une interface web accessible à distance offrira une vue d’ensemble claire, tandis qu’une base de données sécurisée stockera toutes les informations. Des outils d’analyse et de visualisation des données seront intégrés pour faciliter la prise de décision et le suivi des performances.
