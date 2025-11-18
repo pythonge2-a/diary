@@ -3,7 +3,7 @@
 | Étudiant-e              | Groupe | Projet          |
 | ----------------------- | ------ | --------------- |
 | Affolter Jérémy         | 1      | Babisstat       |
-| Asani Adi               | 8      | Éclairage       |
+| Asani Adi               | 9      | Éclairage       |
 | Beaud Corentin          | 2      | Audio           |
 | Bechara Jad             |        |                 |
 | Berthoud Tom            | 6      | GMAO            |
@@ -18,10 +18,10 @@
 | Ferreira Tomovic Dani   | 3      | Solar           |
 | Fuentes Hadrien         | 6      | GMAO            |
 | Gloor Lorentin          | 7      | PV              |
-| Kosher Ali              | 8      | Éclairage       |
+| Kosher Ali              | 9      | Éclairage       |
 | Lambiel Ludovic         | 3      | Solar           |
 | Luisoni Tom             | 5      | FingerFlow      |
-| Majstorovic Martin      | 8      | Éclairage       |
+| Majstorovic Martin      | 9      | Éclairage       |
 | Marchand Luc            | 5      | FingerFlow      |
 | Martinez Théo           | 8      | SwissEcoAdvisor |
 | Moore Alexandre         | 4      | Lune            |
@@ -33,50 +33,76 @@
 | Weber Jason             | 5      | FingerFlow      |
 | Yusuf Anas              | 2      | Audio           |
 
+Les affectations correspondent aux cahiers des charges fournis pour Babisstat, Audio, Solar, Objectif Lune, FingerFlow, GMAO, Orientation PV et SwissEcoAdvisor. Le projet d'éclairage (`lights.md`) cite six prénoms (Adi, Martin, Elisa, Gab, Ali, Pablo) mais seuls Adi Asani, Ali Kosher et Martin Majstorovic figurent dans la liste officielle : la composition doit être confirmée avant la phase d'implémentation. Jad Bechara n'a pas communiqué de projet pour l'instant.
+
 ## Groupes
 
-| Groupe | Projet     | Qualité CdC | Remarques |
-| ------ | ---------- | ----------- | --------- |
-| 1      | Babisstat  |             |           |
-| 2      | Audio      |             |           |
-| 3      | Solar      |             |           |
-| 4      | Lune       |             |           |
-| 5      | FingerFlow |             |           |
+| GRP | Projet           | Pax | Charge (h) | Qualité CdC | Remarques                                             |
+| --- | ---------------- | --- | ---------- | ----------- | ----------------------------------------------------- |
+| 1   | Babisstat        | 4   | 180        | Solide      | CdC complet, MVP priorisé.                            |
+| 2   | Audio            | 5   | 225        | À étoffer   | Description fonctionnelle OK, architecture manquante. |
+| 3   | Solar            | 5   | 225        | Correct     | Objectifs de calcul clairs, UI à préciser.            |
+| 4   | Objectif Lune    | 2   | 90         | Insuffisant | Texte très court, orthographe et portée à clarifier.  |
+| 5   | FingerFlow       | 3   | 135        | Bon         | Vision cohérente, planning et critères à détailler.   |
+| 6   | GMAO & Assurance | 2   | 90         | Complet     | Portée large (maintenance + assurance) à cadrer.      |
+| 7   | Orientation PV   | 3   | 135        | Structuré   | Paramètres bien listés, mécanique à prototyper.       |
+| 8   | SwissEcoAdvisor  | 2   | 90         | Solide      | Concept clair, dépendances données à préciser.        |
+| 9   | Éclairage        | 3*  | 135*       | À clarifier | Cahier `lights.md`, équipe mentionnée plus large.     |
+
+\*Selon la liste officielle; la proposition cite six membres, d'où l'incertitude sur la charge réelle.
 
 ## Projets
 
 ### 1 Babisstat
 
-Le projet Babisstat vise à développer une application Python permettant de suivre et d'analyser les performances des joueurs de babyfoot du chillout. L'application offre un mode manuel pour saisir les scores, buteurs et résultats, ainsi qu'un mode avancé d'analyse vidéo reposant sur OpenCV pour détecter automatiquement les actions de jeu. Une base de données SQLite conserve l'historique des matchs, tandis qu'un système de classement Elo évalue les joueurs. Le MVP se concentre sur la gestion des joueurs, la saisie manuelle et les statistiques essentielles, l'analyse vidéo étant prévue comme amélioration future.
+Babisstat est une application Python destinée au babyfoot du Chillout : elle enregistre les joueurs, permet de configurer des matchs, saisit les buts en mode manuel ou par analyse vidéo (OpenCV) et stocke l’historique dans SQLite pour alimenter un classement Elo et des statistiques détaillées. La première version livrera la gestion des profils, la saisie fiable de résultats et la visualisation des indicateurs, tandis que la détection automatique de buts reste un module exploratoire.
+
+**Revue** — Qualité : cahier des charges très structuré (contexte, objectifs, scénarios) et ton professionnel. Fond : périmètre réaliste pour quatre personnes, avec un MVP clair et une trajectoire progressive vers l’analyse vidéo.
 
 ### 2 Éditeur Audio
 
-Le projet Éditeur Audio consiste à créer un logiciel semblable à Audacity permettant de lire, visualiser, éditer et exporter des fichiers audio dans différents formats. L’application offrira une interface graphique affichant la forme d’onde sur deux pistes et intégrant des outils d’édition essentiels comme découpage, annulation/rétablissement, lecture/pause/stop, mute ou modifications de pitch et tempo. Le développement s’appuiera sur des modules spécialisés tels que Pydub pour le traitement audio et PyQt/Tkinter pour l’interface, avec une organisation du travail en parallèle selon les fonctionnalités.
+Le projet vise à créer un mini-Audacity en Python capable de charger des fichiers MP3/WAV/OGG, d’afficher la forme d’onde sur deux pistes et de proposer les actions usuelles (lecture/pause/stop, mute, annuler/rétablir, découpe, réglage de pitch/tempo) avant export. L’équipe prévoit une interface PyQt/Tkinter et un backend basé sur Pydub ou modules équivalents, chaque membre prenant une fonctionnalité en parallèle.
+
+**Revue** — Qualité : écriture correcte mais le document reste très succinct (listes sans sections, quelques fautes mineures). Fond : objectifs réalistes, mais l’absence d’architecture, de format de données et de critères de réussite complique l’estimation des efforts.
 
 ### 3 Installation solaires
 
-Le projet Programme de calcul pour installation solaire consiste à développer un outil Python capable de dimensionner une installation photovoltaïque. À partir de la localisation, du type d’installation et des informations sur l’emplacement, le programme calcule l’inclinaison et l’orientation optimales des panneaux, estime le nombre de modules nécessaires, la puissance totale ainsi que le coût global du système. Une interface graphique permet de saisir facilement les paramètres, d’afficher les résultats et de fournir des recommandations claires pour guider l’utilisateur dans la conception de son installation solaire.
+Le programme Solar dimensionne une installation photovoltaïque à partir de la localisation, du type d’usage et des contraintes de site : il calcule orientation et inclinaison optimales, estime le nombre de panneaux, la puissance totale ainsi que le coût et restitue les recommandations dans une interface simple avec saisie guidée. Les résultats combinent donc calculs techniques et synthèse économique au même endroit.
+
+**Revue** — Qualité : description claire, orthographe soignée, mais la structure gagnerait à préciser sources de données et format de restitution. Fond : périmètre cohérent pour cinq personnes si les hypothèses (modèle de rayonnement, catalogue de panneaux) sont documentées rapidement.
 
 ### 4. Objectif Lune
 
-Ce projet, développé dans le cadre du cours PythonGE et inspiré par la mission Apollo ainsi que par le domaine aérospatial, consiste à piloter une fusée jusqu’à la Lune afin d’y larguer un module d’exploration. Le programme doit permettre de calculer une trajectoire entre deux planètes, d’afficher en 2D le flux d’air, de détacher un étage de la fusée via une touche du clavier, de présenter le voyage final et de sélectionner un cratère à partir d’une image satellite.
+Objectif Lune ambitionne de simuler le pilotage d’une fusée vers la Lune dans un esprit rétro-gaming : calcul d’une trajectoire entre deux planètes, affichage 2D de flux d’air, séparation d’un étage au clavier, cinématique finale et sélection d’un cratère sur image satellite pour y larguer un module. Le projet s’inscrit dans le cadre du cours PythonGE avec une forte composante visuelle.
+
+**Revue** — Qualité : document très court, bourré de fautes (« Appolo », « planete », « calcuation ») et sans structure Markdown ; un vrai cahier des charges reste à rédiger. Fond : ambitions élevées (simulateur physique, rendu graphique) pour deux personnes, sans indication de modèles ou de limites techniques.
 
 ### 5. FingerFlow
 
-Le projet FingerFlow vise à développer un programme Python utilisant MediaPipe pour la reconnaissance de la main en temps réel. Grâce à la détection des points clés de la main (landmarks), l’utilisateur pourra interagir avec son ordinateur sans contact, en simulant des actions telles que le déplacement du curseur, les différents clics par gestes et le dessin dans l’air avec un doigt. L’application exploitera la webcam pour capter les mouvements de la main et traduire ces gestes en commandes interactives, combinant ainsi vision par ordinateur, interaction homme-machine et créativité numérique. Le programme sera exécuté directement sous Windows pour garantir un accès fiable à la caméra.
+FingerFlow consiste à exploiter MediaPipe pour détecter en temps réel les repères de la main via la webcam et mapper ces gestes sur des interactions desktop : déplacement de curseur, clics, dessin dans l’air ou actions créatives, le tout dans un exécutable Windows afin de garantir l’accès à la caméra. L’équipe veut proposer une interface intuitive qui visualise la main et laisse paramétrer les gestes.
+
+**Revue** — Qualité : proposition bien écrite et structurée, même si certaines sections (charge, jalons) restent esquissées. Fond : cas d’usage clair et réalisable en 135 h, mais il faudra définir précisément la bibliothèque GUI, les gestes supportés et les critères de performance.
 
 ### 6. GMAO & Assurance
 
-Le projet vise à développer une application Python de gestion de maintenance assistée par ordinateur (GMAO) et de gestion des dossiers d’assurance. L’application permettra de gérer les pièces, machines, techniciens et interventions pour la maintenance industrielle, ainsi que la création et le suivi des dossiers d’assurance, sinistres et documents associés. Une interface web accessible à distance offrira une vue d’ensemble claire, tandis qu’une base de données sécurisée stockera toutes les informations. Des outils d’analyse et de visualisation des données seront intégrés pour faciliter la prise de décision et le suivi des performances.
+Ce projet veut livrer une application web unifiée qui couvre à la fois la maintenance industrielle (machines, pièces, stocks, interventions, techniciens) et la gestion de dossiers d’assurance (sinistres, documents, rendez-vous, rémunérations). Le backend Python (Django/Flask + base SQL) expose une interface sécurisée avec rôles, visualisations via Pandas et exports vers rapports ou dashboards.
+
+**Revue** — Qualité : cahier très complet, organisé par modules et fonctionnalités, avec un ton professionnel. Fond : la double portée maintenance + assurance est ambitieuse pour deux personnes et demandera un cadrage précis des MVPs et des modèles de données partagés.
 
 ### 7. Orientation des Panneaux Photovoltaïques
 
-Ce projet vise à développer un système intelligent de gestion d'orientation pour panneaux photovoltaïques. Ce programme optimisera automatiquement la position des panneaux en fonction de la trajectoire solaire et gérera efficacement l'énergie produite.
+Orientation_PV ambitionne de modéliser l’orientation optimale de panneaux photovoltaïques : le logiciel calcule la position du soleil en fonction de la saison, de l’heure, de la localisation et de capteurs (luminosité, météo), pilote virtuellement des moteurs azimut/inclinaison et inclut un module de gestion d’énergie pour batteries, distribution et réinjection réseau. Une interface simulateur présente les comportements et tableaux de bord.
+
+**Revue** — Qualité : document bien structuré (équipe, paramètres, objectifs) et sans fautes majeures. Fond : idée intéressante mais très ambitieuse (calculs astro, contrôle moteur, gestion énergétique) pour trois personnes ; il faudra prioriser rapidement ce qui reste purement logiciel.
 
 ### 8. SwissEcoAdvisor
 
-Le projet SwissEcoAdvisor a pour objectif de développer un programme en Python visant à aider les particuliers à s’orienter vers la technologie d’énergie renouvelable la plus adaptée à leur domicile en Suisse. Le système utilise une "black box" d’orientation pour fournir des estimations précises des technologies possibles (photovoltaïque, éolien, hydraulique) en fonction des données environnementales et des contraintes de l’utilisateur. Une seconde "black box" d’optimisation permet de sélectionner le produit ou la configuration la plus adaptée pour la technologie choisie. Des fonctionnalités optionnelles incluent un comparatif multi-énergie et une carte interactive de la Suisse. Les résultats sont présentés sous forme de graphiques et tableaux pour faciliter l’interprétation des données.
+SwissEcoAdvisor vise à remettre une application d’aide au choix énergétique : l’utilisateur renseigne son adresse et ses contraintes, une première « black box » analyse météo, ensoleillement, vent ou débit pour recommander les technologies adaptées (PV, éolien, hydraulique) avec coûts/production/amortissement, puis une seconde « black box » optimise la configuration retenue. En option, un comparatif multi-énergie et une carte interactive de la Suisse complètent les tableaux et graphiques produits.
+
+**Revue** — Qualité : texte bien structuré (sections, gras, listes) et ton professionnel. Fond : approche crédible pour deux membres, mais la dépendance à des données externes et à des modèles « black box » nécessite de préciser rapidement les sources et méthodes de calcul.
 
 ### 9. Éclairage Intelligent
 
-Le programme est un outil d’aide au dimensionnement d’éclairage intérieur. Il permet de déterminer le type de luminaire le plus adapté à une pièce en se basant sur la surface, la fonction du local, le type de bâtiment et une base de luminaires avec leurs caractéristiques techniques et économiques. Il calcule automatiquement le nombre de luminaires nécessaires et propose la solution la plus avantageuse selon l’efficacité énergétique et le coût.
+Ce calculateur d’éclairage intérieur récupère des données chez les fournisseurs, classe les luminaires et, selon le type de pièce et le bâtiment, dimensionne la quantité nécessaire avant de proposer plusieurs configurations optimisées en coût et efficacité. Après validation, le système génère un plan 2D illustrant l’implantation, liste les accessoires associés et produit un document récapitulatif (quantités, prix, disponibilité, devis).
+
+**Revue** — Qualité : contenu riche mais stocké dans un notebook, avec quelques fautes et un manque de structure formelle (rôles non nominatifs). Fond : fonctionnalités pertinentes pour un projet logiciel, toutefois l’aspiration à scraper des sites fournisseurs et à générer un plan lumineux complet doit être cadrée pour rester réaliste.
