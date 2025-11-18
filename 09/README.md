@@ -1,37 +1,37 @@
 # Semaine 09/16
 
-| Étudiant-e              | Groupe | Projet     |
-| ----------------------- | ------ | ---------- |
-| Affolter Jérémy         | 1      | Babisstat  |
-| Asani Adi               |        |            |
-| Beaud Corentin          | 2      | Audio      |
-| Bechara Jad             |        |            |
-| Berthoud Tom            | 6      | GMAO       |
-| Blatti Thomas           | 3      | Solar      |
-| Brêchet Thomas          | 2      | Audio      |
-| Conde Garea Gabriel     |        |            |
-| Conod Enzo              | 4      | Lune       |
-| Cossy Corentin          | 3      | Solar      |
-| Dahman Elisa            |        |            |
-| do Carmo Afonso Antonio | 1      | Babisstat  |
-| do Vale Lopes Andre     | 2      | Audio      |
-| Ferreira Tomovic Dani   | 3      | Solar      |
-| Fuentes Hadrien         | 6      | GMAO       |
-| Gloor Lorentin          |        |            |
-| Kosher Ali              |        |            |
-| Lambiel Ludovic         | 3      | Solar      |
-| Luisoni Tom             | 5      | FingerFlow |
-| Majstorovic Martin      |        |            |
-| Marchand Luc            | 5      | FingerFlow |
-| Martinez Théo           |        |            |
-| Moore Alexandre         | 4      | Lune       |
-| Mousquès Noémie         | 1      | Babisstat  |
-| Osaje Jordan            | 1      | Babisstat  |
-| Sieve Alexandre         | 3      | Solar      |
-| Tenkeu Azegha Franklin  | 2      | Audio      |
-| Torrent Valentin        |        |            |
-| Weber Jason             | 5      | FingerFlow |
-| Yusuf Anas              | 2      | Audio      |
+| Étudiant-e              | Groupe | Projet          |
+| ----------------------- | ------ | --------------- |
+| Affolter Jérémy         | 1      | Babisstat       |
+| Asani Adi               | 8      | Éclairage       |
+| Beaud Corentin          | 2      | Audio           |
+| Bechara Jad             |        |                 |
+| Berthoud Tom            | 6      | GMAO            |
+| Blatti Thomas           | 3      | Solar           |
+| Brêchet Thomas          | 2      | Audio           |
+| Conde Garea Gabriel     | 7      | PV              |
+| Conod Enzo              | 4      | Lune            |
+| Cossy Corentin          | 3      | Solar           |
+| Dahman Elisa            | 7      | PV              |
+| do Carmo Afonso Antonio | 1      | Babisstat       |
+| do Vale Lopes Andre     | 2      | Audio           |
+| Ferreira Tomovic Dani   | 3      | Solar           |
+| Fuentes Hadrien         | 6      | GMAO            |
+| Gloor Lorentin          | 7      | PV              |
+| Kosher Ali              | 8      | Éclairage       |
+| Lambiel Ludovic         | 3      | Solar           |
+| Luisoni Tom             | 5      | FingerFlow      |
+| Majstorovic Martin      | 8      | Éclairage       |
+| Marchand Luc            | 5      | FingerFlow      |
+| Martinez Théo           | 8      | SwissEcoAdvisor |
+| Moore Alexandre         | 4      | Lune            |
+| Mousquès Noémie         | 1      | Babisstat       |
+| Osaje Jordan            | 1      | Babisstat       |
+| Sieve Alexandre         | 3      | Solar           |
+| Tenkeu Azegha Franklin  | 2      | Audio           |
+| Torrent Valentin        | 8      | SwissEcoAdvisor |
+| Weber Jason             | 5      | FingerFlow      |
+| Yusuf Anas              | 2      | Audio           |
 
 ## Groupes
 
@@ -68,3 +68,15 @@ Le projet FingerFlow vise à développer un programme Python utilisant MediaPipe
 ### 6. GMAO & Assurance
 
 Le projet vise à développer une application Python de gestion de maintenance assistée par ordinateur (GMAO) et de gestion des dossiers d’assurance. L’application permettra de gérer les pièces, machines, techniciens et interventions pour la maintenance industrielle, ainsi que la création et le suivi des dossiers d’assurance, sinistres et documents associés. Une interface web accessible à distance offrira une vue d’ensemble claire, tandis qu’une base de données sécurisée stockera toutes les informations. Des outils d’analyse et de visualisation des données seront intégrés pour faciliter la prise de décision et le suivi des performances.
+
+### 7. Orientation des Panneaux Photovoltaïques
+
+Ce projet vise à développer un système intelligent de gestion d'orientation pour panneaux photovoltaïques. Ce programme optimisera automatiquement la position des panneaux en fonction de la trajectoire solaire et gérera efficacement l'énergie produite.
+
+### 8. SwissEcoAdvisor
+
+Le projet SwissEcoAdvisor a pour objectif de développer un programme en Python visant à aider les particuliers à s’orienter vers la technologie d’énergie renouvelable la plus adaptée à leur domicile en Suisse. Le système utilise une "black box" d’orientation pour fournir des estimations précises des technologies possibles (photovoltaïque, éolien, hydraulique) en fonction des données environnementales et des contraintes de l’utilisateur. Une seconde "black box" d’optimisation permet de sélectionner le produit ou la configuration la plus adaptée pour la technologie choisie. Des fonctionnalités optionnelles incluent un comparatif multi-énergie et une carte interactive de la Suisse. Les résultats sont présentés sous forme de graphiques et tableaux pour faciliter l’interprétation des données.
+
+### 9. Éclairage Intelligent
+
+Le programme est un outil d’aide au dimensionnement d’éclairage intérieur. Il permet de déterminer le type de luminaire le plus adapté à une pièce en se basant sur la surface, la fonction du local, le type de bâtiment et une base de luminaires avec leurs caractéristiques techniques et économiques. Il calcule automatiquement le nombre de luminaires nécessaires et propose la solution la plus avantageuse selon l’efficacité énergétique et le coût.
