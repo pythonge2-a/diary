@@ -7,7 +7,7 @@
 | Beaud Corentin          | 2      | Audio           |
 | Bechara Jad             |        |                 |
 | Berthoud Tom            | 6      | GMAO            |
-| Blatti Thomas           | 3      | Solar           |
+| Blatti Thomas           | 10     | PyFilterLab     |
 | Brêchet Thomas          | 2      | Audio           |
 | Conde Garea Gabriel     | 7      | PV              |
 | Conod Enzo              | 4      | Lune            |
@@ -15,7 +15,7 @@
 | Dahman Elisa            | 7      | PV              |
 | do Carmo Afonso Antonio | 1      | Babisstat       |
 | do Vale Lopes Andre     | 2      | Audio           |
-| Ferreira Tomovic Dani   | 3      | Solar           |
+| Ferreira Tomovic Dani   | 10     | PyFilterLab     |
 | Fuentes Hadrien         | 6      | GMAO            |
 | Gloor Lorentin          | 7      | PV              |
 | Kosher Ali              | 9      | Éclairage       |
@@ -106,3 +106,7 @@ SwissEcoAdvisor vise à remettre une application d’aide au choix énergétique
 Ce calculateur d’éclairage intérieur récupère des données chez les fournisseurs, classe les luminaires et, selon le type de pièce et le bâtiment, dimensionne la quantité nécessaire avant de proposer plusieurs configurations optimisées en coût et efficacité. Après validation, le système génère un plan 2D illustrant l’implantation, liste les accessoires associés et produit un document récapitulatif (quantités, prix, disponibilité, devis).
 
 **Revue** — Qualité : contenu riche mais stocké dans un notebook, avec quelques fautes et un manque de structure formelle (rôles non nominatifs). Fond : fonctionnalités pertinentes pour un projet logiciel, toutefois l’aspiration à scraper des sites fournisseurs et à générer un plan lumineux complet doit être cadrée pour rester réaliste.
+
+### 10. FiltreLab
+
+Ce projet vise à développer un outil Python pour la conception et l’analyse de filtres analogiques en génie électrique. L’application synthétise des filtres d’ordre 2 à 6, calcule les valeurs des composants (R, C, L), analyse le filtre (Bode, pôles/zéros, réponses temporelles) et propose une interface graphique simple pour les étudiants et enseignants.
