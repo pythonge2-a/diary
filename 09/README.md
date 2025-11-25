@@ -57,8 +57,6 @@ Les affectations correspondent aux cahiers des charges fournis pour Babisstat, A
 
 Babisstat est une application Python destinée au babyfoot du Chillout : elle enregistre les joueurs, permet de configurer des matchs, saisit les buts en mode manuel ou par analyse vidéo (OpenCV) et stocke l’historique dans SQLite pour alimenter un classement Elo et des statistiques détaillées. La première version livrera la gestion des profils, la saisie fiable de résultats et la visualisation des indicateurs, tandis que la détection automatique de buts reste un module exploratoire.
 
-**Revue** — Qualité : cahier des charges très structuré (contexte, objectifs, scénarios) et ton professionnel. Fond : périmètre réaliste pour quatre personnes, avec un MVP clair et une trajectoire progressive vers l’analyse vidéo.
-
 ### 2 Éditeur Audio
 
 Le projet vise à créer un mini-Audacity en Python capable de charger des fichiers MP3/WAV/OGG, d’afficher la forme d’onde sur deux pistes et de proposer les actions usuelles (lecture/pause/stop, mute, annuler/rétablir, découpe, réglage de pitch/tempo) avant export. L’équipe prévoit une interface PyQt/Tkinter et un backend basé sur Pydub ou modules équivalents, chaque membre prenant une fonctionnalité en parallèle.
@@ -85,9 +83,9 @@ FingerFlow consiste à exploiter MediaPipe pour détecter en temps réel les rep
 
 ### 6. GMAO & Assurance
 
-Ce projet veut livrer une application web unifiée qui couvre à la fois la maintenance industrielle (machines, pièces, stocks, interventions, techniciens) et la gestion de dossiers d’assurance (sinistres, documents, rendez-vous, rémunérations). Le backend Python (Django/Flask + base SQL) expose une interface sécurisée avec rôles, visualisations via Pandas et exports vers rapports ou dashboards.
+L’équipe prépare un petit outil web (Django/Flask + base SQL) qui centralise deux familles de données : inventaire machines + interventions pour la partie maintenance, suivi de dossiers + documents pour l’assurance. L’objectif MVP se limite à des formulaires CRUD, un suivi de stock avec alertes simples, quelques vues récapitulatives (tableaux, exports CSV/PDF) et une gestion basique des rôles.
 
-**Revue** — Qualité : cahier très complet, organisé par modules et fonctionnalités, avec un ton professionnel. Fond : la double portée maintenance + assurance est ambitieuse pour deux personnes et demandera un cadrage précis des MVPs et des modèles de données partagés.
+**Revue** — Qualité : cahier très complet, organisé par modules et fonctionnalités, avec un ton professionnel. Fond : la portée reste large (maintenance + assurance) mais le périmètre MVP décrit dans la proposition demeure atteignable si les modules avancés (analytics poussées, dashboards, workflows complexes) sont reportés.
 
 ### 7. Orientation des Panneaux Photovoltaïques
 

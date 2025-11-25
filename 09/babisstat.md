@@ -27,8 +27,6 @@ _Application Python pour l’analyse de matchs de babyfoot_
 
 Le babyfoot présent dans le bar de l’école, surnommé *chillout*, est largement utilisé par des joueurs occasionnels ou assidus, mais sans aucun système de suivi ou d’analyse des performances. Le projet **Babisstat** est conçu pour combler ce manque. Il vise à développer une application qui permet de recueillir et d’afficher des informations pertinentes sur les matchs joués, d’établir un classement dynamique des joueurs et, à terme, d’intégrer des outils d’analyse vidéo pour automatiser la collecte des statistiques de jeu.
 
----
-
 ## 2. Objectifs du projet
 
 L’objectif principal du projet est de permettre la saisie et l’analyse des performances lors des matchs de babyfoot en utilisant une application Python. Cette application doit offrir deux modes de fonctionnement :
