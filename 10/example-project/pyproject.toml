@@ -1,0 +1,27 @@
+[project]
+name = "spaceship"  # en minuscules c'est plus standard, mais pas obligatoire
+version = "0.1.0"
+description = "A beautiful spaceship simulation package."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "click>=8.3.1",
+    "pint>=0.25.2",
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["spaceship*"]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.1",
+    "ruff>=0.14.6",
+]
+
+[project.scripts]
+spaceship = "spaceship.__main__:main"

@@ -1,0 +1,41 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Distribution / packaging
+*.egg-info/
+*.egg
+dist/
+build/
+pip-wheel-metadata/
+
+# Uv
+.uv/
+
+# Virtual envs
+.venv/
+venv/
+env/
+
+# Byte-compiled / cache
+*.pytest_cache/
+cache/
+.pytest_cache/
+
+# Logs
+*.log
+
+# Local config
+*.env
+*.local
+
+# Editors / IDE
+.vscode/
+.idea/
+
+# OS-specific
+.DS_Store
+Thumbs.db
