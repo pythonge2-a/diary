@@ -4,6 +4,12 @@
 
 Une expression régulière (ou regex, pour "regular expression") est une séquence de caractères qui forme un modèle de recherche. Elles sont principalement utilisées pour la recherche et la manipulation de chaînes de caractères.
 
+### Sites de références
+
+- [Regex101](https://regex101.com/) : Un outil en ligne pour tester et déboguer les expressions régulières.
+- [Regular-Expressions.info](https://www.regular-expressions.info/) : Un site complet sur les expressions régulières, couvrant de nombreux aspects et langages.
+- [Cheat Sheet](https://www.rexegg.com/regex-quickstart.html) : Une feuille de référence rapide pour les expressions régulières.
+  
 ### Syntaxe de base
 
 Classes de caractères : `[]`

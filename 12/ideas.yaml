@@ -1,0 +1,7 @@
+course: Python
+topics: 
+  - Expressions régulières
+  - Manipulation de chaînes
+  - Recherche et remplacement
+title: Introduction aux expressions régulières en Python
+description: Apprenez à utiliser les expressions régulières en Python pour rechercher, manipuler et
